@@ -21,6 +21,7 @@
 		F1C53FD5180D086C00E4DCA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C53FB7180D086C00E4DCA4 /* UIKit.framework */; };
 		F1C53FDD180D086C00E4DCA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1C53FDB180D086C00E4DCA4 /* InfoPlist.strings */; };
 		F1C53FDF180D086C00E4DCA4 /* kitchenbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C53FDE180D086C00E4DCA4 /* kitchenbTests.m */; };
+		F1C53FEA180D0D3100E4DCA4 /* AskerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C53FE9180D0D3100E4DCA4 /* AskerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		F1C53FDA180D086C00E4DCA4 /* kitchenbTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kitchenbTests-Info.plist"; sourceTree = "<group>"; };
 		F1C53FDC180D086C00E4DCA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1C53FDE180D086C00E4DCA4 /* kitchenbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kitchenbTests.m; sourceTree = "<group>"; };
+		F1C53FE8180D0D3100E4DCA4 /* AskerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskerViewController.h; sourceTree = "<group>"; };
+		F1C53FE9180D0D3100E4DCA4 /* AskerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +115,11 @@
 		F1C53FB9180D086C00E4DCA4 /* kitchenb */ = {
 			isa = PBXGroup;
 			children = (
-				F1C53FC2180D086C00E4DCA4 /* KitchenSinkAppDelegate.h */,
-				F1C53FC3180D086C00E4DCA4 /* KitchenSinkAppDelegate.m */,
 				F1C53FC5180D086C00E4DCA4 /* Main.storyboard */,
+				F1C53FE8180D0D3100E4DCA4 /* AskerViewController.h */,
+				F1C53FE9180D0D3100E4DCA4 /* AskerViewController.m */,
 				F1C53FC8180D086C00E4DCA4 /* KitchenSinkViewController.h */,
 				F1C53FC9180D086C00E4DCA4 /* KitchenSinkViewController.m */,
-				F1C53FCB180D086C00E4DCA4 /* Images.xcassets */,
 				F1C53FBA180D086C00E4DCA4 /* Supporting Files */,
 			);
 			path = kitchenb;
@@ -126,6 +128,9 @@
 		F1C53FBA180D086C00E4DCA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F1C53FCB180D086C00E4DCA4 /* Images.xcassets */,
+				F1C53FC2180D086C00E4DCA4 /* KitchenSinkAppDelegate.h */,
+				F1C53FC3180D086C00E4DCA4 /* KitchenSinkAppDelegate.m */,
 				F1C53FBB180D086C00E4DCA4 /* kitchenb-Info.plist */,
 				F1C53FBC180D086C00E4DCA4 /* InfoPlist.strings */,
 				F1C53FBF180D086C00E4DCA4 /* main.m */,
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1C53FCA180D086C00E4DCA4 /* KitchenSinkViewController.m in Sources */,
+				F1C53FEA180D0D3100E4DCA4 /* AskerViewController.m in Sources */,
 				F1C53FC4180D086C00E4DCA4 /* KitchenSinkAppDelegate.m in Sources */,
 				F1C53FC0180D086C00E4DCA4 /* main.m in Sources */,
 			);
@@ -384,6 +390,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kitchenb/kitchenb-Prefix.pch";
 				INFOPLIST_FILE = "kitchenb/kitchenb-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,6 +404,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kitchenb/kitchenb-Prefix.pch";
 				INFOPLIST_FILE = "kitchenb/kitchenb-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

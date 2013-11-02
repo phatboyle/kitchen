@@ -19,10 +19,6 @@
 @synthesize answer=_answer;
 @synthesize question=_question;
 
-// gesture to capture if they enter
-
-- (IBAction)tapGesture:(id)sender {
-}
 
 
 - (void)setQuestion:(NSString *)question
@@ -46,6 +42,12 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.answerField becomeFirstResponder];
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     self.answer = textField.text;
@@ -58,7 +60,16 @@
     }
 }
 
-// handle input into the textfiled.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ([textField.text length]) {
+        [textField resignFirstResponder];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 
 @end
 

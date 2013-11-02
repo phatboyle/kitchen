@@ -21,27 +21,22 @@
                                 <rect key="frame" x="0.0" y="9" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Add Label" id="7qM-1p-Bse"/>
+                                    <barButtonItem title="Add Label" id="7qM-1p-Bse">
+                                        <connections>
+                                            <segue destination="4PA-hd-8OC" kind="modal" id="Gcf-p3-Euh"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="QtR-hL-vo4" appends="YES" id="WoD-Th-mSa"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="kitchenSink" destination="8bC-Xf-vdC" id="HaK-hc-zFV"/>
-                        <outlet property="tap" destination="QtR-hL-vo4" id="TCo-1C-fGn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="QtR-hL-vo4">
-                    <connections>
-                        <action selector="tap:" destination="BYZ-38-t0r" id="bl0-3t-Lm6"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-170" y="-284"/>
         </scene>

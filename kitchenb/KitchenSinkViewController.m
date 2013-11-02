@@ -16,13 +16,16 @@
 @end
 
 @implementation KitchenSinkViewController
-//- (IBAction)tap:(UITapGestureRecognizer *)sender {
-    // figure out where the tap happened
-    // loop through the views to compare if it happened there
-    // take action on the view if it did
-//}
 
--(void)addLabel: (NSString *)text
+- (void)askerviewController:(AskerViewController *)sender didAskQuestion:(NSString *)question andGotAnswer:(NSString *)answer
+{
+    [self addLabel:answer];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
+- (void)addLabel:(NSString *)text
 {
     UILabel *label = [[UILabel alloc] init];
     label.text = text;
@@ -41,11 +44,15 @@
     view.center = CGPointMake(x, y);
 }
 
-- (void)askerviewController:(AskerViewController *)sender didAskQuestion:(NSString *)question andGotAnswer:(NSString *)answer
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [self addLabel:answer];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
+    if ([segue.identifier hasPrefix:@"Create label"] ){
+        AskerViewController *asker = (AskerViewController *)segue.destinationViewController;
+        asker.question = @"What do you want the label to say";
+        asker.answer = @"Label text";
+        asker.delegate = self;
+        
+    }
 }
 
 - (void)viewDidLoad

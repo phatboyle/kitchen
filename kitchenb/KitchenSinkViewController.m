@@ -46,7 +46,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier hasPrefix:@"Create label"] ){
+    if ([segue.identifier hasPrefix:@"Create Label"] ){
         AskerViewController *asker = (AskerViewController *)segue.destinationViewController;
         asker.question = @"What do you want the label to say";
         asker.answer = @"Label text";

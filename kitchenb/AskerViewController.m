@@ -9,6 +9,8 @@
 #import "AskerViewController.h"
 
 @interface AskerViewController () <UITextFieldDelegate>
+
+
 @property (weak, nonatomic) IBOutlet UITextField *answerField;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @end
@@ -18,6 +20,7 @@
 @synthesize questionLabel=_questionLabel;
 @synthesize answer=_answer;
 @synthesize question=_question;
+@synthesize delegate=_delegate;
 
 
 
@@ -55,8 +58,8 @@
         [[self presentingViewController] dismissViewControllerAnimated:YES completion:Nil];
     } else {
     [self.delegate askerviewController:self
-                        didAskQuestion:self.answer
-                          andGotAnswer:self.question];
+                        didAskQuestion:self.question
+                          andGotAnswer:self.answer];
     }
 }
 
